@@ -1,0 +1,66 @@
+// GET ALL VEHICLES
+###
+GET http://localhost:7777/api/vehicles
+
+// GET ONE VEHICLE
+### // USER MAY CHANGE NUMBER AT END OF URL AS NECESSARY
+GET http://localhost:7777/api/vehicles/1
+
+// SEARCH VEHICLE BY COLOR
+### // USER MAY CHANGE COLOR AT END OF URL AS NECESSARY
+GET http://localhost:7777/api/vehicles/search?color=Red
+
+// SORT VEHICLES BY SMALLEST TO LARGEST PRICE
+### // USER MAY CHANGE INPUT AS NECESSARY
+GET http://localhost:7777/api/vehicles?sort=price&order=asc
+
+// SORT VEHICLES BY LARGEST TO SMALLEST PRICE
+### // USER MAY CHANGE INPUT AS NECESSARY
+GET http://localhost:7777/api/vehicles?sort=price&order=desc
+
+
+<> 2024-04-25T174505.200.json
+// UPDATE ONE VEHICLE
+### // USER MAY CHANGE INPUT AS NECESSARY
+PUT http://localhost:7777/api/vehicles/2?model=Updated%20Model&brand=Updated%20Brand&color=Updated%20Color&price=30000.00&licensePlate=UPDATED123&isNew=true
+Content-Type: application/json
+
+{
+  "model": "Updated Model",
+  "brand": "Updated Brand",
+  "color": "Updated Color",
+  "price": 10000.00,
+  "isNew": true
+}
+
+<> 2024-04-25T173904.405.json
+<> 2024-04-25T173852.405.json
+
+// UPDATE ONE VALUE FOR ONE VEHICLE
+### // USER MAY CHANGE INPUT AS NECESSARY
+PATCH http://localhost:7777/api/vehicles/1?price=25000.00
+Content-Type: application/json
+
+{
+  "price": 24000.00
+}
+
+### // USER MAY CHANGE INPUT AS NECESSARY
+POST http://localhost:7777/api/vehicles
+Content-Type: application/json
+
+{
+  "model": "New Model",
+  "brand": "New Brand",
+  "color": "New Color",
+  "price": 35000.00,
+  "licensePlate": "NEW123",
+  "year": 2005,
+  "isNew": false
+}
+
+<> 2024-04-25T174544.404.json
+<> 2024-04-25T173857.404.json
+
+### // USER MAY CHANGE NUMBER AT END OF URL AS NECESSARY
+DELETE http://localhost:7777/api/vehicles/1
