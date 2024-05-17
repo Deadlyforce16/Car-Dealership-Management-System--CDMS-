@@ -40,14 +40,21 @@ Example 1: Adding a New Vehicle
 -The following command adds a new vehicle to the inventory:
 
 POST /vehicles
+
 Content-Type: application/json
 
 {
+
   "model": "Toyota Camry",
+  
   "brand": "Toyota",
+  
   "color": "Blue",
+  
   "price": 25000,
+  
   "licensePlate": "ABC1234"
+  
 }
 
 -This command uses the 'POST' method to add a new vehicle with specified attributes such as model, brand, color, price, and license plate.
